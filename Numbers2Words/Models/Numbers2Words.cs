@@ -21,6 +21,7 @@ namespace Numbers2Words
                 {
                     numArr[i] = ((int)nums[nums.Length-1-i])-ud;
                 } 
+                
                 if(number >= 999999)
                 {
                     output += ones[numArr[5]] + " " + place[2] + " ";

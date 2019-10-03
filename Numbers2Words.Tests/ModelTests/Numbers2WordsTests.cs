@@ -25,8 +25,17 @@ namespace Numbers2Words.Tests
 
             Assert.AreEqual(output, "ten");
         }
+
         [TestMethod]
-         public void NumbersToWords_NinetyNine_NinetyNine()
+         public void NumbersToWords_Teens_Ten()
+        {
+            int userInput = 19;
+            string output = NumbersToWords.Numbers2Words(userInput);
+
+            Assert.AreEqual(output, "nineteen");
+        }
+        [TestMethod]
+         public void NumbersToWords_Tens_NinetyNine()
         {
             int userInput = 99;
             string output = NumbersToWords.Numbers2Words(userInput);
@@ -35,7 +44,7 @@ namespace Numbers2Words.Tests
         }
 
         [TestMethod]
-         public void NumbersToWords_NinethousandnineHundreNinetyNine_NinethousandnineHundreNinetyNine()
+         public void NumbersToWords_Thousands_NinethousandnineHundreNinetyNine()
         {
             int userInput = 9999;
             string output = NumbersToWords.Numbers2Words(userInput);
@@ -43,7 +52,7 @@ namespace Numbers2Words.Tests
             Assert.AreEqual(output, "nine thousand nine hundred ninety nine");
         }
         [TestMethod]
-         public void NumbersToWords_NineteenthousandnineHundreNinetyNine_NineteenthousandnineHundreNinetyNine()
+         public void NumbersToWords_TeenThousands_NineteenthousandnineHundreNinetyNine()
         {
             int userInput = 19999;
             string output = NumbersToWords.Numbers2Words(userInput);
@@ -51,7 +60,7 @@ namespace Numbers2Words.Tests
             Assert.AreEqual(output, "nineteen thousand nine hundred ninety nine");
         }
         [TestMethod]
-         public void NumbersToWords_NinetyninethousandnineHundreNinetyNine_NinetythousandnineHundreNinetyNine()
+         public void NumbersToWords_TenThousands_NinetythousandnineHundreNinetyNine()
         {
             int userInput = 99999;
             string output = NumbersToWords.Numbers2Words(userInput);
@@ -59,7 +68,7 @@ namespace Numbers2Words.Tests
             Assert.AreEqual(output, "ninety nine thousand nine hundred ninety nine");
         }
         [TestMethod]
-         public void NumbersToWords_NineHundredNinetyninethousandnineHundreNinetyNine_NineHundredNinetythousandnineHundreNinetyNine()
+         public void NumbersToWords_HundredThousands_NineHundredNinetythousandnineHundreNinetyNine()
         {
             int userInput = 999999;
             string output = NumbersToWords.Numbers2Words(userInput);
